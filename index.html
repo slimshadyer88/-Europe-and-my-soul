@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Наше Европейское Путешествие</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+      background-attachment: fixed;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      animation: fadeIn 2s;
+    }
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 4.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .subtitle {
+      font-size: 1.5rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-weight: 500;
+    }
+    .heart {
+      color: #ff4d4d;
+      animation: heartbeat 1.5s infinite;
+    }
+    .photo-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      padding: 40px 0;
+    }
+    .photo-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.5s, box-shadow 0.5s;
+    }
+    .photo-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+    .photo-placeholder {
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .city-name {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      font-family: 'Dancing Script', cursive;
+    }
+    .caption {
+      padding: 30px;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .quote {
+      font-style: italic;
+      margin: 15px 0;
+      padding-left: 20px;
+      border-left: 3px solid #ff4d4d;
+    }
+    .footer {
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 3s;
+    }
+    .ending-phrase {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      font-family: 'Dancing Script', cursive;
+    }
+    .love-note {
+      font-size: 1.4rem;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-button {
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      color: white;
+      border: none;
+      padding: 18px 45px;
+      font-size: 1.4rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.4s;
+      box-shadow: 0 8px 25px rgba(255, 75, 43, 0.6);
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 3rem; }
+      .subtitle { font-size: 1.2rem; }
+      .photo-placeholder { height: 300px; }
+      .caption { padding: 20px; font-size: 1rem; }
+      .ending-phrase { font-size: 1.8rem; }
+      .love-note { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Наше Европейское Путешествие</h1>
+      <p class="subtitle">...</p>
+    </header>
+    <div class="photo-gallery">...</div>
+    <div class="footer">
+      <p class="ending-phrase">До встречи в реальности</p>
+      <p class="love-note"><span class="heart">❤️</span> «Ты — мой дом. Даже если он меняется на 1000 километров.»</p>
+      <button class="cta-button" onclick="showLoading()">Скоро мы там будем по-настоящему</button>
+    </div>
+  </div>
+  <script>
+    function showLoading() {
+      document.body.innerHTML = `
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d); color: white; font-family: 'Montserrat', sans-serif; text-align: center;">
+          <div>
+            <h1 style="font-size: 3rem; margin-bottom: 20px; animation: pulse 2s infinite;">Loading…</h1>
+            <p style="font-size: 2rem; font-family: 'Dancing Script', cursive;">реальность.</p>
+          </div>
+        </div>
+        <style>
+          @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+          }
+        </style>
+      `;
+      setTimeout(() => location.reload(), 5000);
+    }
+  </script>
+</body>
+</html>
