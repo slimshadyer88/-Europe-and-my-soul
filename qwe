@@ -1,0 +1,298 @@
+> Erik:
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наше Европейское Путешествие</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            animation: fadeIn 2s;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-weight: 500;
+        }
+        
+        .heart {
+            color: #ff4d4d;
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        .photo-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            padding: 40px 0;
+        }
+        
+        .photo-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+        
+        .photo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .photo-placeholder {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .city-name {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .caption {
+            padding: 30px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .quote {
+            font-style: italic;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 3px solid #ff4d4d;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 60px 20px;
+            animation: fadeIn 3s;
+        }
+        
+        .ending-phrase {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .love-note {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            font-size: 1.4rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s;
+            box-shadow: 0 5px 15px rgba(255, 75, 43, 0.4);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+
+> Erik:
+box-shadow: 0 8px 25px rgba(255, 75, 43, 0.6);
+        }
+        
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .subtitle { font-size: 1.2rem; }
+            .photo-placeholder { height: 300px; }
+            .caption { padding: 20px; font-size: 1rem; }
+            .ending-phrase { font-size: 1.8rem; }
+            .love-note { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Наше Европейское Путешествие</h1>
+            <p class="subtitle">Каждый из этих моментов ждёт нас в будущем. Это лишь вопрос времени, пока мы не создадим эти воспоминания вместе.Ты там одна, среди чужих людей, и внутри всё, кажется, опустело. Морально выжато, устала верить, устала ждать.
+Но знай: это не навсегда. Это просто момент. Просто яма перед взлётом.
+
+Ты — невероятная. Сильная, красивая, светлая. Я вижу в тебе гораздо больше, чем ты сейчас можешь сама в себе увидеть.
+Ты не одна. Я рядом. Даже если на расстоянии — я с тобой каждой мыслью, каждой мечтой.
+
+Мы ведь с тобой выберемся отсюда.
+Будем гулять по улицам Парижа или Барселоны, держаться за руки, смеяться, пить кофе где-то в Италии, ловить солнце на берегу. Всё это будет — потому что мы этого хотим, и мы идём к этому.
+
+Ты держись, душа моя.
+Немного осталось. Я рядом. И когда станет совсем сложно — просто напиши мне. Даже если ничего не хочешь говорить. Я просто буду.
+А потом мы вместе начнём новую жизнь. Без страха. Без боли. Только мы и дорога.</p>
+        </header>
+        
+        <div class="photo-gallery">
+            <!-- Париж -->
+            <div class="photo-card">
+                <div class="photo-placeholder" style="background-image: url('https://iili.io/FGOFM2s.png');">
+                    <div class="city-name">Париж, 2026</div>
+                </div>
+                <div class="caption">
+                    <p>Мы впервые пробуем вино под Эйфелевой башней.</p>
+                    <p class="quote">"Ты выглядишь ещё прекраснее при свете вечерних огней", — говорю я тебе.</p>
+                    <p class="quote">"Я знаю", — отвечаешь ты.</p>
+                </div>
+            </div>
+            
+            <!-- Амстердам -->
+            <div class="photo-card">
+                <div class="photo-placeholder" style="background-image: url('https://iili.io/FGOIfFp.png');">
+                    <div class="city-name">Амстердам</div>
+                </div>
+                <div class="caption">
+                    <p>Мы сидим в кофешопе.</p>
+                    <p class="quote">"Пиздец накурило!", — кричишь ты сквозь смех.</p>
+                    <p class="quote">"Ахуеть как", — отвечаю я.</p>
+                </div>
+            </div>
+            
+            <!-- Прага -->
+            <div class="photo-card">
+                <div class="photo-placeholder" style="background-image: url('https://iili.io/FGOud4R.png');">
+                    <div class="city-name">Прага</div>
+                </div>
+                <div class="caption">
+                    <p>Мы стоим на Карловом мосту и молчим. Просто держимся за руки.</p>
+                    <p class="quote">Иногда самые важные слова — это те, что остаются несказанными.</p>
+                </div>
+            </div>
+            
+            <!-- Лиссабон -->
+            <div class="photo-card">
+                <div class="photo-placeholder" style="background-image: url('https://iili.io/FGORqss.png');">
+                    <div class="city-name">Лиссабон, 2026</div>
+                </div>
+                <div class="caption">
+                    <p>Мы только что переехали. У тебя в руках кофе и список идей, куда пойти.</p>
+                    <p class="quote">"Я всё ещё немного не верю, что мы здесь", — говоришь ты.</p>
+                    <p class="quote">"А я знал", — отвечаю я.</p>
+                </div>
+            </div>
+            
+            <!-- Венеция -->
+            <div class="photo-card">
+                <div class="photo-placeholder" style="background-image: url('https://images.unsplash.com/photo-1514890547357-a9ee288728e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+<div class="city-name">Венеция</div>
+                </div>
+                <div class="caption">
+                    <p>Мы сели не в тот водный автобус, заблудились и смеялись весь вечер.</p>
+                    <p class="quote">"Ты самый родной чужой в этом огромном мире", — шепчешь ты мне.</p>
+                    <p class="quote">"С тобой даже заблудиться — приключение", — целую я тебя в ответ.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p class="ending-phrase">До встречи в реальности</p>
+            <p class="love-note"><span class="heart">❤️</span> «Ты — мой дом. Даже если он меняется на 1000 километров.»</p>
+            <button class="cta-button" onclick="showLoading()">Скоро мы там будем по-настоящему</button>
+        </div>
+    </div>
+
+    <script>
+        function showLoading() {
+            // Создаем страницу загрузки
+            document.body.innerHTML = `
+                <div style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);
+                    color: white;
+                    font-family: 'Montserrat', sans-serif;
+                    text-align: center;
+                ">
+                    <div>
+                        <h1 style="font-size: 3rem; margin-bottom: 20px; animation: pulse 2s infinite;">Loading…</h1>
+                        <p style="font-size: 2rem; font-family: 'Dancing Script', cursive;">реальность.</p>
+                    </div>
+                </div>
+                <style>
+                    @keyframes pulse {
+                        0% { opacity: 0.5; }
+                        50% { opacity: 1; }
+                        100% { opacity: 0.5; }
+                    }
+                </style>
+            `;
+            
+            // Через 5 секунд возвращаем на главную
+            setTimeout(() => {
+                location.reload();
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
